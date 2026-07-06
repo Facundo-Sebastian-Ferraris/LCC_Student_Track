@@ -1,0 +1,215 @@
+:root {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-tertiary: #0f0f1e;
+  --border-color: #0f3460;
+  --text-primary: #eaeaea;
+  --text-muted: #888;
+  --accent-cyan: #4cc9f0;
+  --accent-pink: #f72585;
+  --accent-blue: #4361ee;
+  --accent-blue-hover: #3a56d4;
+  --success: #2a9d8f;
+  --danger: #e63946;
+  --warn: #f77f00;
+  
+  --color-aprobado: #2ECC40;
+  --color-promocionado: #00FFFF;
+  --color-cursando: #FFD700;
+  --color-en_curso: #5DADE2;
+  --color-disponible: #FF00FF;
+  --color-perdido: #FF4136;
+  --color-no_disponible: #FF851B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 360px;
+  background: var(--bg-secondary);
+  padding: 16px;
+  overflow-y: auto;
+  border-right: 2px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.sidebar h1 {
+  font-size: 17px;
+  margin: 0 0 6px 0;
+  color: var(--accent-cyan);
+}
+
+.sidebar h1 small {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: normal;
+  margin-top: 2px;
+}
+
+.sidebar h2 {
+  font-size: 13px;
+  margin: 14px 0 6px 0;
+  color: var(--accent-pink);
+  border-bottom: 1px solid #333;
+  padding-bottom: 3px;
+}
+
+/* Botones */
+.btn {
+  background: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  margin: 2px 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: 0.2s;
+}
+
+.btn:hover { background: var(--accent-blue-hover); }
+.btn.danger { background: var(--danger); }
+.btn.success { background: var(--success); }
+.btn.warn { background: var(--warn); }
+
+/* Textarea */
+.json-textarea {
+  width: 100%;
+  height: 110px;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 6px;
+  font-family: monospace;
+  font-size: 10px;
+  resize: vertical;
+}
+
+/* Stats */
+.stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+  font-size: 12px;
+  border-bottom: 1px dashed #333;
+}
+
+.stat span:last-child {
+  font-weight: bold;
+  color: var(--accent-cyan);
+}
+
+/* Leyenda */
+.legend-item {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  margin: 3px 0;
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid;
+}
+
+/* Node Info */
+.node-info {
+  background: var(--bg-tertiary);
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-top: 6px;
+  min-height: 50px;
+}
+
+.node-info .title {
+  color: var(--accent-pink);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.status-btns button {
+  padding: 4px 7px;
+  font-size: 10px;
+}
+
+/* Progress bar */
+.progress-bar {
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+  margin: 5px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--success), var(--accent-cyan));
+  transition: width 0.4s;
+}
+
+/* Inputs */
+select, input[type=number] {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid #444;
+  padding: 3px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--success);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.toast.show { opacity: 1; }
+.toast.error { background: var(--danger); }
+
+/* Graph container */
+.graph-container {
+  flex: 1;
+  background: var(--bg-tertiary);
+}
+
+/* Checkbox labels */
+.option-label {
+  font-size: 11px;
+  display: block;
+  margin: 4px 0;
+}
+
+/* File input hidden */
+.file-input-hidden { display: none; }
