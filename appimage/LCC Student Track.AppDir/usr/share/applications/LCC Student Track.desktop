@@ -1,0 +1,9 @@
+[Desktop Entry]
+Categories=
+Comment=Plan LCC Student Track
+Exec=lcc-student-track
+StartupWMClass=lcc-student-track
+Icon=lcc-student-track
+Name=LCC Student Track
+Terminal=false
+Type=Application

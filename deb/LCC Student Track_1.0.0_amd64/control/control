@@ -1,0 +1,9 @@
+Package: lcc-student-track
+Version: 1.0.0
+Architecture: amd64
+Installed-Size: 10934
+Maintainer: Facundo Ferraris
+Priority: optional
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0
+Description: Plan LCC Student Track
+ (none)
